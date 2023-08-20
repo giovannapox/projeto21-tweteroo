@@ -9,6 +9,11 @@ import { CreateUserDto } from './dtos/user.dto';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
+  @Get("/")
+  getHealth() {
+    return this.appService.health();
+  }
+  
   @Post("sign-up")
   @HttpCode(200)
   postSignUp(@Body() body: CreateUserDto){

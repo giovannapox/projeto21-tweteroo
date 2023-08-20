@@ -14,6 +14,10 @@ export class AppService {
     this.tweets = [];
   };
 
+  health() {
+    return "I'm okay!";
+  };
+
   postSignUp(body: User){
     return this.users.push(body);
   };
@@ -37,7 +41,7 @@ export class AppService {
 
     const start = (page - 1) * 15;
     const end = page * 15;
-    
+
     return this.tweets.slice(start, end);
   };
 
