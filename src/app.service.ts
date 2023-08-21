@@ -11,7 +11,7 @@ export class AppService {
   private tweets: Tweet[];
 
   constructor() {
-    this.users = [new User('Gustavo1','https://www.google.com.br/')];
+    this.users = [];
     this.tweets = [];
   };
 
