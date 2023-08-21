@@ -7,10 +7,5 @@ export class CreateTweetDto {
 
     @IsString()
     @IsNotEmpty()
-    @IsUrl()
-    avatar: string;
-    
-    @IsString()
-    @IsNotEmpty()
     tweet: string
 };

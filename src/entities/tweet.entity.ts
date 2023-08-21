@@ -3,27 +3,21 @@ export class Tweet {
     private avatar: string;
     private tweet: string;
 
-    constructor(username: string, avatar: string, tweet: string){
+    constructor(username: string, avatar: string, tweet: string) {
         this.username = username;
         this.avatar = avatar;
         this.tweet = tweet;
     };
 
-    get Username(){
+    get Username() {
         return this.username;
     }
 
-    get Avatar(){
+    get Avatar() {
         return this.avatar;
     }
 
-    get Tweet(){
+    get Tweet() {
         return this.tweet;
-    }
-
-    setValues(username: string, avatar: string, tweet: string) {
-        this.username = username;
-        this.avatar = avatar;
-        this.tweet = tweet;
     }
 };

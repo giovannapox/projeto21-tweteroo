@@ -13,7 +13,7 @@ export class AppController {
   getHealth() {
     return this.appService.health();
   }
-  
+
   @Post("sign-up")
   @HttpCode(200)
   postSignUp(@Body() body: CreateUserDto){
@@ -24,8 +24,7 @@ export class AppController {
   @Post("tweets")
   postTweets(@Body() body: CreateTweetDto) {
     try {
-      const userBody = new Tweet(body.username, body.avatar, body.tweet);
-      return this.appService.postTweets(userBody);
+      return this.appService.postTweets(body);
     } catch (err) {
       throw new HttpException('UNAUTHORIZED', HttpStatus.UNAUTHORIZED);
     };
